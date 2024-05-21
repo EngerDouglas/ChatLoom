@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="../css/chatwindow.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght,GRAD@8..144,100..1000,-200&display=swap" rel="stylesheet">
     <title>ChatLoom</title>
 </head>
-<body>
+<body >
     <nav class="d-flex">
             <img src="../img/9.png" alt="">
-            <h1 >Hi, Username</h1>
+            <h1 id="username-owner">Hi, Username</h1>
             <ul>
                 <li><a href="login.html" id="logout"><img src="../img/cerrar-sesion.png" alt=""></a></li> <!-- Enlace para salir de la cuenta -->
             </ul>
     </nav>
  
-    <div id="main" class="d-flex justify-content-center">
-        <div class="cuadrado2 ">
+    <div id="main" class="d-flex justify-content-center ">
+        <form class="cuadrado2 ">
             <div class="chats">
-                <input type="text" placeholder="Buscar amigo">
+                <input type="text" placeholder="Buscar ...">
                 <button class="boton-find">
                     <img src="../img/lupa.png" alt="">
                 </button>
@@ -56,17 +57,57 @@
                 </div>
                 <p>Name</p>
             </div>
-        </div>
+        </form>
 
-        <div class="cuadrado">
-            <div>
-                <div class="d-flex justify-content-sb">
-                    <input type="text" class="question-input" id="InputMessage" placeholder="Text....." autocomplete="off" autofocus>
-                    <button type="submit" class="btnSummit"><img src="../img/enviar.png" alt=""></button>
+        <form class="cuadrado content" id="chat-socket">
+            <div class="people-information blur-container">
+                <div>
+                    <img src="../img/pfp.jpg" alt="">
+                </div>
+                <h2 id="username-friend">Username</h2>
+      
+
+                <div id="settings" class="menu">
+                    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+                    <label class="menu-open-button" for="menu-open">
+                     <span class="lines line-1"></span>
+                     <span class="lines line-2"></span>
+                     <span class="lines line-3"></span>
+                   </label>
+                 
+                    <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
+                    <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
+                    <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a>
+                    <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
+                    <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> </a>
+                    <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i> </a>
+                </div>
+
+
+            </div>
+            <div class="chat-window " id="chat-window">
+                <div class="messege-client"><!--Mesnaje de cliente-->
+                    <img src="../img/pfp.jpg" alt="" class="img-client"><!--foto de cliente-->
+                    <div class="messege">
+                        <p id="info-messege-client">Hello</p><!--mensaje a enviar-->
+                    </div>
+                </div>
+
+                <div class="messege-owner justify-content-right"><!--Mesnaje de propietario-->
+                    <img src="../img/pfp.jpg" alt="" class="img-owner"><!--foto de propietario-->
+                    <div class="messege">
+                        <p id="info-messege-owner">Hi</p><!--mensaje a enviar-->
+                    </div>
                 </div>
             </div>
-        </div>
+            <nav class="d-flex justify-content-sb mb">
+                <input type="text" class="question-input" id="InputMessage" placeholder="Text....." autocomplete="off" autofocus>
+                <button type="submit" class="btnSummit"><img src="../img/enviar.png" alt=""></button>
+            </nav>
+        </form>
     </div>
      
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/chat.js"></script>
 </html>
