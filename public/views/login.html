@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <title>ChatLoom</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center">
+        <img src="../img/8.png" alt="logo">
+    </div>
+    <div class="center">
+        <div class="main">  	
+            <input type="checkbox" id="chk" aria-hidden="true">
+            <div class="signup">
+                <form id="form-create">
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" id="username" name="username" placeholder="User name" required="">
+                    <input type="email" id="email" name="email" placeholder="Email" required="">
+                    <input type="password" id="password" name="password" placeholder="Password" minlength="8" required="">
+                    <button id="btn1" type="submit">Sign up</button>
+                </form>
+            </div>
+            <div class="login">
+                <form id = "form-login">
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <input type="email" id="logusername" name="email" placeholder="Email" required="">
+                    <input type="password" id="logpassword" name="password" placeholder="Password" minlength="8" required>
+                    <button id="btn"type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/login.js"></script>
+</html>
