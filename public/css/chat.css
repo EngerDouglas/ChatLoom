@@ -109,8 +109,8 @@ input{
     color: white; /* Color del texto */
 }
 
-.people :hover{
-    background-color: #1a042c1a; 
+.people:hover{
+    background-color: #1a042c7e; 
 }
 
 .people img{
@@ -125,7 +125,7 @@ input{
 }
 
 .boton-find:hover {
-    background-color: #004AAD; /* Color de fondo al pasar el ratón por encima */
+    background-color: #1a042c7e; /* Color de fondo al pasar el ratón por encima */
 }
 
 .boton-find img {
@@ -144,22 +144,22 @@ p{
     outline:0;
     margin:8px 0;
     display:block;
-    width:80%;
+    width:85%;
     padding:8px 16px;
     border-radius:16px;
     background-color:rgba(255,255,255,.2);
     border:0;
     margin-top: 67%;
     margin-left: 60px;
-    margin-top: 580px;
+    margin-top: 630px;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .menu-files{
-    width: 45px; /* Ancho del botón */
-    height: 45px; /* Altura del botón */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
     background-color: #610da5; /* Color de fondo del botón */
     color: white; /* Color del texto */
     border: none; /* Sin borde */
@@ -169,7 +169,9 @@ p{
     justify-content: center; /* Centra horizontalmente el contenido */
     font-size: 16px; /* Tamaño del texto */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
-    margin-right: 20px; /* Espacio entre el input y el botón */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 .bottom-chat{
@@ -185,17 +187,31 @@ li{
 }
 
 .btnSummit{
-    width: 40px; /* Ancho de la imagen */
-    height: 40px; /* Altura de la imagen */
-    border-radius: 50%; /* Bordes redondeados para hacer el contenedor circular */
-    color: white;
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
     background-color: #610da5; /* Color de fondo del botón */
-    margin-top: 575px;
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Bordes redondeados para hacer el botón circular */
+    display: flex; /* Centra el contenido del botón */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    font-size: 16px; /* Tamaño del texto */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-right: 20px; /* Espacio entre el input y el botón */
+    margin-top: 626px;
+    margin-left: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
-.btnSummit :hover{
-    background-color: black; /* Color de fondo del botón */
+.btnSummit:hover{
+    background-color: #1a042c7e; /* Color de fondo del botón */
+}
+
+.btnSummit img{
+    margin-right: 5px;
 }
 
 #logout{
