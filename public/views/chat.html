@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/chat.css">
-    <link rel="stylesheet" href="../css/chatwindow.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght,GRAD@8..144,100..1000,-200&display=swap" rel="stylesheet">
@@ -65,8 +64,7 @@
                     <img src="../img/pfp.jpg" alt="">
                 </div>
                 <h2 id="username-friend">Username</h2>
-      
-
+                
                 <div id="settings" class="menu">
                     <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
                     <label class="menu-open-button" for="menu-open">
@@ -75,9 +73,9 @@
                      <span class="lines line-3"></span>
                    </label>
                  
-                    <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
-                    <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
-                    <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a>
+                    <a href="#" class="menu-item blue"> <i class="img-send"><img src="../img/image-gallery.png" alt=""></i> </a>
+                    <a href="#" class="menu-item green"> <i class="location-send"><img src="../img/location.png" alt=""></i> </a>
+                    <a href="#" class="menu-item red"> <i class="file-send"><img src="../img/file.png" alt=""></i> </a>
                     <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
                     <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> </a>
                     <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i> </a>
@@ -86,28 +84,34 @@
 
             </div>
             <div class="chat-window " id="chat-window">
-                <div class="messege-client"><!--Mesnaje de cliente-->
-                    <img src="../img/pfp.jpg" alt="" class="img-client"><!--foto de cliente-->
-                    <div class="messege">
-                        <p id="info-messege-client">Hello</p><!--mensaje a enviar-->
-                    </div>
-                </div>
-
-                <div class="messege-owner justify-content-right"><!--Mesnaje de propietario-->
-                    <img src="../img/pfp.jpg" alt="" class="img-owner"><!--foto de propietario-->
-                    <div class="messege">
-                        <p id="info-messege-owner">Hi</p><!--mensaje a enviar-->
-                    </div>
-                </div>
+      
             </div>
-            <nav class="d-flex justify-content-sb mb">
-                <input type="text" class="question-input" id="InputMessage" placeholder="Text....." autocomplete="off" autofocus>
-                <button type="submit" class="btnSummit"><img src="../img/enviar.png" alt=""></button>
-            </nav>
+            <form class="d-flex justify-content-sb mb" id="messege-form">
+                <input type="text" class="question-input" name="message" placeholder="Text....." autocomplete="off" autofocus>
+                <button class="btnSummit"><img src="../img/enviar.png" alt=""></button>
+            </form>
         </form>
     </div>
+
+    <script id="message-template" type="text/html">
+        <div class="messege-owner justify-content-right">
+            <p>
+                <span class="messege">{{createdAt}}</span>
+            </p>
+            <p>{{message}}</p>
+        </div>
+    </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+
+ 
      
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="../js/chat.js"></script>
 </html>

@@ -279,6 +279,25 @@ li{
     box-sizing: border-box;   /* Incluye el borde dentro del tamaño especificado */
     margin-left: 50px;
     scrollbar-width: 10px;
+    overflow-y: scroll;
+    margin-right: 50px;
+}
+
+.chat-window::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 50px;              /* Ancho de la barra de desplazamiento */
+}
+
+.chat-window::-webkit-scrollbar-track {
+    background: #7d209736;      /* Color de fondo de la pista de desplazamiento */
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.1);         /* Color del pulgar de la barra de desplazamiento */
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover {
+    background: #7d209736;         /* Color del pulgar al pasar el ratón por encima */
 }
 
 
@@ -683,3 +702,18 @@ li{
  .credit a:hover {
     text-decoration: underline;
  }
+
+.img-send img{
+    width: 40px; /* Ancho de la imagen */
+    height: 40px; /* Altura de la imagen */
+}
+
+.file-send img{
+    width: 40px; /* Ancho de la imagen */
+    height: 40px; /* Altura de la imagen */
+}
+
+.location-send img{
+    width: 40px; /* Ancho de la imagen */
+    height: 40px; /* Altura de la imagen */
+}
