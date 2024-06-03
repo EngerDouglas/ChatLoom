@@ -61,6 +61,14 @@ nav{
     justify-content: space-around;
 }
 
+/*chat messege*/
+
+.message{margin-bottom:16px}
+.message__name{font-weight:600;font-size:14px;margin-right:8px}
+
+
+.chat__messages{flex-grow:1;padding:24px 24px 0;overflow-y:scroll}
+
 .cuadrado{
     margin-top: 70px;
     width: 50%; /* Ancho del cuadrado */
@@ -203,6 +211,33 @@ li{
     color: #191919;
 }
 
+.chat__sidebar{
+    margin-top: 70px;
+    margin-right: 50px;
+    width: 20%; /* Ancho del cuadrado */
+    height: 700px; /* Alto del cuadrado */
+    background-color: #B62CDD; /* Color de fondo del cuadrado */
+    border-radius: 20px; /* Bordes redondeados */
+    overflow-y:scroll
+}
+
+.chat__sidebar::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 50px;              /* Ancho de la barra de desplazamiento */
+}
+
+.chat__sidebar::-webkit-scrollbar-track {
+    background: #7d209736;      /* Color de fondo de la pista de desplazamiento */
+}
+
+.chat__sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.1);         /* Color del pulgar de la barra de desplazamiento */
+}
+
+.chat__sidebar::-webkit-scrollbar-thumb:hover {
+    background: #7d209736;         /* Color del pulgar al pasar el ratón por encima */
+}
+
 .btnSummit{
     width: 40px; /* Ancho del botón */
     height: 40px; /* Altura del botón */
@@ -216,7 +251,7 @@ li{
     font-size: 16px; /* Tamaño del texto */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
     margin-right: 20px; /* Espacio entre el input y el botón */
-    margin-top: 10px;
+    margin-top: -45px;
     margin-left: 10px;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
@@ -301,7 +336,7 @@ li{
 }
 
 
-.chat-window .messege{
+.messege{
     display: flex;
     width: 300px; /* Ancho del rectángulo */
     height: 80px; /* Altura del rectángulo */
@@ -404,7 +439,8 @@ li{
 @media screen and (max-width: 700px) {
     body {
        padding: 100px 0 0 0;
-       width: 100%
+       width: 100%;
+   
     }
  }
  
@@ -429,13 +465,14 @@ li{
     transition: -webkit-transform ease-out 200ms;
     transition: transform ease-out 200ms;
     transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+    margin-top: -2px;
  }
  
  .menu-open {
     display: none;
  }
  
- .lines {
+.lines {
     width: 25px;
     height: 3px;
     background: #596778;
