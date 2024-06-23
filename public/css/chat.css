@@ -93,6 +93,36 @@ nav{
     margin: 5px;
 }
 
+.room-title{
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+
+.list-title{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.users{
+    justify-content: center;
+    margin-left: -30px;
+}
+
+.users li{
+    display: flex;
+    width: 300px; /* Ancho del rectángulo */
+    height: 80px; /* Altura del rectángulo */
+    background-color: #610da5; /* Color de fondo del rectángulo */
+    margin: 30px; /* Margen alrededor del rectángulo */
+    border-radius: 15px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    color: white; /* Color del texto */
+    justify-content: center;
+}
+
 input{
 	width: 60%;
 	height: 20px;

@@ -12,7 +12,6 @@ const messageTemplate = document.querySelector('#message-template').innerHTML;
 const locationMessageTemplate = document.querySelector('#location-message-template').innerHTML;
 const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML;
 
-
 // query string
 const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true });
 
@@ -29,12 +28,6 @@ const autoscroll = () => {
     if(containerHeight - newMessageHeight <= scrollOffset){
         $messages.scrollTop = $messages.scrollHeight;
     }
-}
-
-function upload(files) {
-    socket.emit("upload", files[0], (status) => {
-      console.log(status);
-    });
 }
 
 socket.on('message', (message) => {
